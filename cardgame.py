@@ -66,10 +66,6 @@ RANKS = ["9", "10", "J", "Q", "K", "A"]
 POKER_DICE = ["9", "10", "J", "Q", "K", "A"]
 values = {"9": 9, "10": 10, "J": 10, "Q": 10, "K": 10, "A": 11}
 
-
-
-
-
 # dice_roll = pygame.mixer.Sound('./assets/dice_roll.mp3')
 background_sound = pygame.mixer.Sound(resource_path("assets/casino.mp3"))
 mouse_click = pygame.mixer.Sound(resource_path("assets/mouse_click.mp3"))
@@ -81,7 +77,6 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Royal Set Poker")
 
 clock = pygame.time.Clock()
-
 
 # Card class with enhanced graphics
 class Card:
@@ -102,7 +97,7 @@ class Card:
         # Border
         pygame.draw.rect(screen, BLACK, rect, 2, border_radius=5)
 
-        # # Shadow for selected card
+        # Shadow for selected card
         if selected:
             shadow_surf = pygame.Surface(
                 (CARD_WIDTH + 8, CARD_HEIGHT + 8), pygame.SRCALPHA
@@ -132,7 +127,6 @@ class Deck:
             self.shuffle()
         return [self.cards.pop() for _ in range(count)]
 
-
 # Dice class with corrected mechanics
 class Dice:
     def __init__(self, count):
@@ -155,7 +149,6 @@ class Dice:
         if 0 <= index < self.count:
             self.kept[index] = not self.kept[index]
 
-
 # GameState class
 class GameState:
     def __init__(self, max_holes):
@@ -171,9 +164,6 @@ class GameState:
         self.roll_count = 0
         self.max_rolls = 2
         self.discarded = False
-        # Add mulligan tracking
-        # self.mulligans_remaining = max_holes // 9  # 1 mulligan per 9 holes
-        # self.used_mulligan_this_hole = False
 
     def update_max_rolls(self):
         hand_size = len(self.hand)
