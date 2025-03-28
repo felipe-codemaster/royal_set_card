@@ -457,20 +457,8 @@ def draw_buttons(game, mouse_pos):
     # mulligan_text = button_font.render(f"Mulligans: {game.mulligans_remaining}", True, GOLD)
     # screen.blit(mulligan_text, (20, 140))  # Position below high score
 
-    # Add mulligan button when applicable
-    # if game.mulligans_remaining > 0 and not game.used_mulligan_this_hole:
-    #     mulligan_rect = pygame.Rect(150, 450, BUTTON_WIDTH, BUTTON_HEIGHT)
-    #     if mulligan_rect.collidepoint(mouse_pos):
-    #         pygame.draw.rect(screen, GREEN, mulligan_rect, 0, border_radius=5)
-    #     else:
-    #         pygame.draw.rect(screen, GREEN, mulligan_rect, 2, border_radius=5)
-    #     mulligan_text = button_font.render("MULLIGAN", True, BLACK)
-    #     screen.blit(mulligan_text, (155, 460))
-
-
 # State handling functions
 def handle_menu(high_scores):
-
     background_nature.play()
     screen.blit(background_image, (0, 0))
     modes = [3, 9, 18, 36, 54, 72]
