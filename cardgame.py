@@ -482,7 +482,6 @@ def handle_menu(high_scores):
                     return "playing", GameState(mode)
     return "menu", None
 
-
 def handle_playing(game):
     background_nature.stop()
     screen.blit(background, (0, 0))
@@ -618,9 +617,6 @@ def handle_playing(game):
             #     game.mulligans_remaining -= 1
             #     game.used_mulligan_this_hole = True
             #     if game.rolled:
-            #         game.max_rolls += 1  # Allow one more reroll
-            #     else:
-            #         game.discarded = False  # Allow one more discard
 
     # # Reset mulligan usage when moving to next hole
     # if game.round > game.max_holes:
