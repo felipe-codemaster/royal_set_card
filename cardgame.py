@@ -453,10 +453,6 @@ def draw_buttons(game, mouse_pos):
     lock_text = button_font.render("LOCK IN", True, BLACK)
     screen.blit(lock_text, (665 - BUTTON_WIDTH, 510))
 
-    # Add mulligan count display
-    # mulligan_text = button_font.render(f"Mulligans: {game.mulligans_remaining}", True, GOLD)
-    # screen.blit(mulligan_text, (20, 140))  # Position below high score
-
 # State handling functions
 def handle_menu(high_scores):
     background_nature.play()
